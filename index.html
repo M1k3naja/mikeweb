@@ -1,7 +1,116 @@
-<html>
-  <body>
-   <h1>your name here</h1>
-   <h2>your student code here</h2>
-   <h3>ไม่ไหวแล้วจารย์</h3>
-  </body>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้านขายหนังสือการ์ตูน</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #ff6f61;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header img {
+      width: 120px;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .book-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+    .book {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      margin: 15px;
+      text-align: center;
+      padding: 15px;
+    }
+    .book img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .book h3 {
+      margin: 10px 0 5px;
+    }
+    .book p {
+      color: #ff6f61;
+      font-weight: bold;
+    }
+    .advertisement {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 20px;
+      margin: 30px 0;
+      font-size: 18px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="โลโก้ร้าน">
+  </header>
+
+  <nav>
+    <a href="#">หน้าแรก</a>
+    <a href="#">หนังสือทั้งหมด</a>
+    <a href="#">โปรโมชั่น</a>
+    <a href="#">ติดต่อเรา</a>
+  </nav>
+
+  <div class="book-section">
+    <div class="book">
+      <img src="book1.jpg" alt="หนังสือการ์ตูน 1">
+      <h3>One Piece Vol.101</h3>
+      <p>ราคา: 89 บาท</p>
+    </div>
+    <div class="book">
+      <img src="book2.jpg" alt="หนังสือการ์ตูน 2">
+      <h3>Demon Slayer Vol.15</h3>
+      <p>ราคา: 95 บาท</p>
+    </div>
+    <div class="book">
+      <img src="book3.jpg" alt="หนังสือการ์ตูน 3">
+      <h3>My Hero Academia Vol.20</h3>
+      <p>ราคา: 99 บาท</p>
+    </div>
+  </div>
+
+  <div class="advertisement">
+    🎉 โปรโมชั่นพิเศษสำหรับนักศึกษามช. ลดทันที 10% เมื่อแสดงบัตรนักศึกษา!
+  </div>
+
+  <footer>
+    &copy; 2025 ร้านขายหนังสือการ์ตูน | ติดต่อ: comicstore@example.com
+  </footer>
+
+</body>
 </html>
