@@ -4,120 +4,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ร้านขายหนังสือการ์ตูน</title>
+  <title>ขนมบ้านๆ - Homemade Cake & Bakery</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+    /* ===== Reset ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+    body { line-height: 1.6; color: #333; background-color: #fff8f0; }
+
+    /* ===== Header ===== */
+    header { 
+      background-color: #ffd6ba; 
+      padding: 40px 20px; 
+      text-align: center; 
+      color: #703800;
     }
-    header {
-      background-color: #ff6f61;
-      text-align: center;
-      padding: 20px 0;
+    header h1 { font-family: 'Pacifico', cursive; font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; margin-bottom: 20px; }
+    header a { background-color: #ff7f50; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; }
+    header a:hover { background-color: #e76f3c; }
+
+    /* ===== Section ===== */
+    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+    h2 { text-align: center; margin-bottom: 40px; font-size: 2em; color: #703800; }
+
+    /* ===== Menu ===== */
+    .menu-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .menu-item { background-color: #fff2e8; border-radius: 15px; padding: 20px; width: 220px; text-align: center; transition: transform 0.3s; }
+    .menu-item:hover { transform: scale(1.05); }
+    .menu-item img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .menu-item h3 { color: #ff7f50; margin-bottom: 10px; }
+    .menu-item p { font-size: 0.9em; margin-bottom: 5px; }
+
+    /* ===== Promo ===== */
+    .promo { background-color: #ffe5d4; text-align: center; border-radius: 15px; padding: 30px 20px; margin-bottom: 40px; }
+    .promo h3 { color: #ff6347; margin-bottom: 10px; }
+    .promo p { font-size: 1.1em; }
+
+    /* ===== About ===== */
+    .about p { font-size: 1.1em; text-align: center; max-width: 800px; margin: 0 auto; }
+
+    /* ===== Footer ===== */
+    footer { background-color: #ffd6ba; text-align: center; padding: 30px 20px; color: #703800; }
+    footer a { color: #ff7f50; text-decoration: none; font-weight: bold; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .menu-item { width: 45%; }
     }
-    header img {
-      width: 120px;
-    }
-    nav {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .book-section {
-      display: flex;
-      justify-content: space-around;
-      padding: 30px;
-      flex-wrap: wrap;
-    }
-    .book {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 250px;
-      margin: 15px;
-      text-align: center;
-      padding: 15px;
-    }
-    .book img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .book h3 {
-      margin: 10px 0 5px;
-    }
-    .book p {
-      color: #ff6f61;
-      font-weight: bold;
-    }
-    .advertisement {
-      background-color: #ffe0b2;
-      text-align: center;
-      padding: 20px;
-      margin: 30px 0;
-      font-size: 18px;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
+    @media (max-width: 500px) {
+      .menu-item { width: 100%; }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <img src="logo.png" alt="logo.png">
+    <h1>ขนมบ้านๆ</h1>
+    <p>อบด้วยใจ สดใหม่ทุกวัน</p>
+    <a href="#menu">สั่งซื้อเลย</a>
   </header>
 
-  <nav>
-    <a href="#">หน้าแรก</a>
-    <a href="#">หนังสือทั้งหมด</a>
-    <a href="#">โปรโมชั่น</a>
-    <a href="#">ติดต่อเรา</a>
-  </nav>
-
-  <div class="book-section">
-    <div class="book">
-      <img src="book1.jpg" alt="book1.jpg">
-      <h3>One Piece Vol.101</h3>
-      <p>ราคา: 89 บาท</p>
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>เมนูแนะนำ</h2>
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=เค้กช็อกโกแลต" alt="เค้กช็อกโกแลต">
+        <h3>เค้กช็อกโกแลต</h3>
+        <p>เนื้อนุ่ม ราดช็อกโกแลตเข้มข้น</p>
+        <p>ราคา: 50 บาท</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=เค้กวนิลา" alt="เค้กวนิลา">
+        <h3>เค้กวนิลา</h3>
+        <p>หอมหวาน นุ่มละมุน</p>
+        <p>ราคา: 45 บาท</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=เค้กชาเขียว" alt="เค้กชาเขียว">
+        <h3>เค้กชาเขียวมัทฉะ</h3>
+        <p>กลิ่นชาเขียวญี่ปุ่นแท้</p>
+        <p>ราคา: 55 บาท</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=บราวนี่" alt="บราวนี่">
+        <h3>บราวนี่</h3>
+        <p>หนึบหนับ ช็อกโกแลตเข้มข้น</p>
+        <p>ราคา: 50 บาท</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=ครัวซองต์" alt="ครัวซองต์">
+        <h3>ครัวซองต์เนยสด</h3>
+        <p>กรอบนอก นุ่มใน หอมเนยแท้</p>
+        <p>ราคา: 45 บาท</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/220x150.png?text=คุกกี้" alt="คุกกี้">
+        <h3>คุกกี้ช็อกชิพ</h3>
+        <p>กรอบ หอม หวานกำลังดี</p>
+        <p>ราคา: 40 บาท</p>
+      </div>
     </div>
-    <div class="book">
-      <img src="book2.jpg" alt="book2.jpg">
-      <h3>Demon Slayer Vol.15</h3>
-      <p>ราคา: 95 บาท</p>
-    </div>
-    <div class="book">
-      <img src="book3.jpg" alt="book3.jpg">
-      <h3>My Hero Academia Vol.20</h3>
-      <p>ราคา: 99 บาท</p>
-    </div>
-  </div>
+  </section>
 
-  <div class="advertisement">
-    🎉 โปรโมชั่นพิเศษสำหรับนักศึกษามช. ลดทันที 10% เมื่อแสดงบัตรนักศึกษา!
-  </div>
+  <!-- Promo Section -->
+  <section id="promo">
+    <div class="promo">
+      <h3>โปรโมชั่นพิเศษ!</h3>
+      <p>ซื้อครบ 5 ชิ้น แถมฟรี 1 ชิ้น 🧁</p>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>เกี่ยวกับร้านเรา</h2>
+    <div class="about">
+      <p>
+        ขนมบ้านๆ เป็นร้านเค้กโฮมเมดที่อบสดใหม่ทุกวัน ใช้วัตถุดิบคุณภาพ ไม่ใส่สารกันบูด มีเมนูหลากหลายเหมาะกับนักศึกษาและคนทำงาน
+        สร้างความรู้สึกอบอุ่นเหมือนขนมทำจากบ้าน
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 ร้านขายหนังสือการ์ตูน | ติดต่อ: 661512217 อริยะ แสนย่าง
+    ติดต่อเรา: 
+    <a href="https://instagram.com/" target="_blank">Instagram : kanombaan_baan</a> | 
+    <a href="https://facebook.com/" target="_blank">Facebook</a>
   </footer>
-
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	createChat({
-		webhookUrl: 'https://m1k3.app.n8n.cloud/webhook/9f52812f-beb0-49ee-ae4c-9016c203277b/chat'
+		webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
 	});
 </script>
 </body>
